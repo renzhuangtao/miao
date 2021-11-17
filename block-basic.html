@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: renshuaitao
  * @Date: 2021-11-16 22:33:05
- * @LastEditTime: 2021-11-16 22:43:07
+ * @LastEditTime: 2021-11-17 17:49:50
  * @LastEditors: Please set LastEditors
  * @Reference: 
 -->
@@ -15,23 +15,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Bin</title>
     <style>
-        div {
-            margin: 26px 26px;
-
-            background-color: red
+        body {
+            margin: 20px;
+        }
+        header {
+            
+            background-color: red;
+            /*元素设置最小宽度*/
+            min-width: 600px;
         }
 
-        div.span {
-            width: 560px;
+        header nav {
+            width: 600px;
+            margin: auto;
+        }
+        main{
+            padding: 0 10px;
+            /*max-width 属性用来给元素设置最大宽度值. 定义了max-width的元素会在达到max-width值之后避免进一步按照width属性设置变大.*/
+            max-width: 600px;
+            margin: auto;
+            margin-top:20px;
+            margin-bottom:20px;
+            border: 2px solid;
+            box-sizing: border-box;
+        }
+        main div {
+            height:50px;
+            background-color: violet;
+        }
+        main div:hover{
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+        main p{
+            height: 4em;
+            overflow:auto;
+        }
+        section{
+            margin:auto;
+            border: 50px solid red;
+            border-color:transparent transparent orange transparent;
+            width: 0;
         }
     </style>
 </head>
 
 <body>
-    <div>
-        <span>aaaaa</span>
-
-    </div>
+    <header>
+        <nav>aaaaa</nav>
+    </header>
+    <main>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quo dolorum vitae eligendi laborum consequuntur aut ad itaque consectetur minus?
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt eveniet sunt facere dolorum commodi, odio magni eaque corporis maiores voluptates.
+        </p>
+        <div></div>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus laudantium accusantium fugiat, deserunt quidem voluptates impedit blanditiis. Odit, quaerat ab!
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, debitis.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, possimus?
+        </p>
+    </main>
+    <section></section>
 </body>
 
 </html>
