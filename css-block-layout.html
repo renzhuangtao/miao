@@ -2,12 +2,13 @@
  * @Description: 
  * @Author: renshuaitao
  * @Date: 2021-11-17 18:48:19
- * @LastEditTime: 2021-11-17 22:33:40
+ * @LastEditTime: 2021-11-19 22:11:45
  * @LastEditors: Please set LastEditors
  * @Reference: 
 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,75 +17,108 @@
     <title>Document</title>
     <style>
         body {
-            margin:0;
+            margin: 0;
         }
-        header.a{
+
+        header.a {
             background-color: black;
-            margin-bottom:20px;
+            margin-bottom: 20px;
         }
+
         header.a div {
             width: 600px;
             background-color: black;
-            margin:auto;
-            color:white ;
+            margin: auto;
+            color: white;
         }
-        header.b{
-            width:600px;
-            background-color:black;
+
+        header.b {
+            width: 600px;
+            background-color: black;
             /*父元素宽度的一半减去300px*/
             padding: 0 calc(50% - 300px);
-            color:white ;
+            color: white;
         }
-        p{
-            width:600px;
-            margin-left:auto;
-            margin-right:auto;
+
+        p {
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        ul.cards{
+
+        ul.cards {
             list-style: none;
             width: 600px;
             margin: auto;
-            padding:0;
+            padding: 0;
         }
-        ul.cards li{
+
+        ul.cards li {
             width: 100px;
             height: 40px;
             box-sizing: border-box;
-            border:3px solid;
+            border: 3px solid;
             margin-bottom: 15px;
             /*字体居中*/
             text-align: center;
-            line-height:34px;
-            
+            line-height: 34px;
+
         }
-         ul.cards li:nth-child(n + 5){
-             margin-left: 110px;
-         }
-          ul.cards li:nth-child(n + 9){
-             margin-left: 220px;
-         } 
-         ul.cards li:nth-child(4n + 5){
-             margin-top: -220px;
-         }
-         ul.links{
-             width: 600px;
-             padding:0;
-             margin:auto;
-             list-style: none;
-             overflow: hidden;
-         }
-         ul.links li{
-             border-bottom: 1px dotted;
-             padding-top:1px;
-             margin-bottom:-1px;
-             margin: -1px;
-         }
-         div.dibu{
-             background-color:burlywood;
-             text-align:center;
-         }
+
+        ul.cards li:nth-child(n + 5) {
+            margin-left: 110px;
+        }
+
+        ul.cards li:nth-child(n + 9) {
+            margin-left: 220px;
+        }
+
+        ul.cards li:nth-child(4n + 5) {
+            margin-top: -220px;
+        }
+
+        ul.links {
+            width: 600px;
+            padding: 0;
+            margin: auto;
+            list-style: none;
+            overflow: hidden;
+        }
+
+        ul.links li {
+            border-bottom: 1px dotted;
+            padding-top: 1px;
+            margin-bottom: -1px;
+            margin: -1px;
+        }
+
+        ul.hang {
+            list-style: none;
+            width: 600px;
+            padding: 0;
+            margin: auto;
+
+
+        }
+
+        ul.hang li {
+
+            text-align: center;
+            display: inline-block;
+            width: 180px;
+            height: 40px;
+            box-sizing: border-box;
+            border: 3px solid;
+            line-height: 34px;
+        }
+
+        div.dibu {
+            background-color: burlywood;
+            text-align: center;
+        }
     </style>
 </head>
+
 <body>
     <header class="a">
         <div>hello world 请调整浏览器窗口大小查看效果</div>
@@ -95,20 +129,20 @@
     <p>
         将进酒<br>
 
-李白〔唐代〕<br>
+        李白〔唐代〕<br>
 
-君不见黄河之水天上来，奔流到海不复回。<br>
-君不见高堂明镜悲白发，朝如青丝暮成雪。<br>
-人生得意须尽欢，莫使金樽空对月。<br>
-天生我材必有用，千金散尽还复来。<br>
-烹羊宰牛且为乐，会须一饮三百杯。<br>
-岑夫子，丹丘生，将进酒，杯莫停。<br>
-与君歌一曲，请君为我倾耳听。(倾耳听 一作：侧耳听)<br>
-钟鼓馔玉不足贵，但愿长醉不愿醒。(不足贵 一作：何足贵；不愿醒 一作：不复醒)<br>
-古来圣贤皆寂寞，惟有饮者留其名。(古来 一作：自古；惟 通：唯)<br>
-陈王昔时宴平乐，斗酒十千恣欢谑。<br>
-主人何为言少钱，径须沽取对君酌。<br>
-五花马、千金裘，呼儿将出换美酒，与尔同销万古愁<br>
+        君不见黄河之水天上来，奔流到海不复回。<br>
+        君不见高堂明镜悲白发，朝如青丝暮成雪。<br>
+        人生得意须尽欢，莫使金樽空对月。<br>
+        天生我材必有用，千金散尽还复来。<br>
+        烹羊宰牛且为乐，会须一饮三百杯。<br>
+        岑夫子，丹丘生，将进酒，杯莫停。<br>
+        与君歌一曲，请君为我倾耳听。(倾耳听 一作：侧耳听)<br>
+        钟鼓馔玉不足贵，但愿长醉不愿醒。(不足贵 一作：何足贵；不愿醒 一作：不复醒)<br>
+        古来圣贤皆寂寞，惟有饮者留其名。(古来 一作：自古；惟 通：唯)<br>
+        陈王昔时宴平乐，斗酒十千恣欢谑。<br>
+        主人何为言少钱，径须沽取对君酌。<br>
+        五花马、千金裘，呼儿将出换美酒，与尔同销万古愁<br>
     </p>
     <ul class="cards">
         <li>产品</li>
@@ -124,6 +158,21 @@
         <li>产品</li>
         <li>产品</li>
     </ul>
+    <ul class="hang">
+        <li>产品</li>
+        <li>产品</li>
+        <li>产品</li>
+        <li>产品</li>
+        <li>产品</li>
+        <li>产品</li>
+        <li>产品</li>
+        <li>产品</li>
+        <li>产品</li>
+        <li>产品</li>
+        <li>产品</li>
+        <li>产品</li>
+    </ul>
+
     <ul class="links">
         <li>link</li>
         <li>link</li>
@@ -133,7 +182,8 @@
     </ul>
     <div class="dibu">
         ©版权所有<br>
-本页所有布局均使用块元素
+        本页所有布局均使用块元素
     </div>
 </body>
+
 </html>
