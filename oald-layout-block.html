@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: renshuaitao
  * @Date: 2021-11-22 22:21:33
- * @LastEditTime: 2021-11-22 22:43:48
+ * @LastEditTime: 2021-11-23 21:27:58
  * @LastEditors: Please set LastEditors
  * @Reference: 
 -->
@@ -14,12 +14,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            margin: 0;
+            min-width: 930px;
+        }
         .wordlist{
             box-sizing: border-box;
             width: 200px;
             background-color:#eaeef3;
             height:100vh;
             border-right: 1px solid;
+        }
+        .wordlist h1{
+            font-size: 24px;
+            line-height: 72px;
+            margin:0 0.5em;
+            text-align: right;
+        }
+        .wordlist div{
+            /*box-sizing 属性允许您以特定的方式定义匹配某个区域的特定元素。
+            例如，假如您需要并排放置两个带边框的框，
+            可通过将 box-sizing 设置为 "border-box"。 
+            这可令浏览器呈现出带有指定宽度和高度的框，并把边框和内边距放入框中*/
+            box-sizing: border-box;
+            height:27px;
+            margin:4px;
+            text-align:center;
         }
     </style>
 </head>
