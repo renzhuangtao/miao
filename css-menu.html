@@ -1,0 +1,104 @@
+<!--
+ * @Description: 
+ * @Author: renshuaitao
+ * @Date: 2021-11-27 15:41:32
+ * @LastEditTime: 2021-11-27 15:53:27
+ * @LastEditors: Please set LastEditors
+ * @Reference: 
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>级联菜单</title>
+    <style>
+        ul {
+            padding: 0;
+            margin: 0;
+            /*去除列表样式*/
+            list-style: none;
+        }
+
+        ul ul {
+            top: 100%;
+            left: 0;
+        }
+
+        .main-menu li {
+            /*white-space CSS 属性是用来设置如何处理元素中的 空白 (en-US
+            连续的空白符会被合并。但文本内的换行无效*/
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .main-menu li:hover {
+            background-color: gold;
+        }
+
+        .main-menu>li {
+            display: inline-block;
+        }
+
+        .main-menu ul {
+            /*隐藏元素*/
+            display: none;
+            position: absolute;
+        }
+
+        li:hover>ul {
+            /*变成块元素*/
+            display: block;
+        }
+
+        ul ul ul {
+            left: 100%;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="main-menu">
+        <li>文件
+            <ul>
+                <li>新建文件</li>
+                <li>create folder
+                    <ul>
+                        <li>111</li>
+                        <li>222</li>
+                        <li>333
+                            <ul>
+                                <li>111</li>
+                                <li>222</li>
+                                <li>333</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>aaa</li>
+            </ul>
+        </li>
+        <li>文件
+            <ul>
+                <li>新建文件</li>
+                <li>新建文件夹</li>
+                <li>aaa</li>
+            </ul>
+        </li>
+        <li>文件
+            <ul>
+                <li>新建文件</li>
+                <li>新建文件夹</li>
+                <li>aaa</li>
+            </ul>
+        </li>
+        <li>文件
+            <ul>
+                <li>新建文件</li>
+                <li>新建文件夹</li>
+                <li>aaa</li>
+            </ul>
+        </li>
+    </ul>

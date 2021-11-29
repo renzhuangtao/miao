@@ -1,3 +1,11 @@
+<!--
+ * @Description: 
+ * @Author: renshuaitao
+ * @Date: 2021-11-26 21:05:49
+ * @LastEditTime: 2021-11-26 21:12:22
+ * @LastEditors: Please set LastEditors
+ * @Reference: 
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,20 +16,25 @@
     <title>Document</title>
     <style>
         div {
-            width: auto;
+            /*此元素会作为一个表格单元格显示*/
+            display: table-cell;
+            widows: 200px;
+            height: 100px;
+            /*vertical-align 属性设置元素的垂直对齐方式。*/
+            vertical-align: bottom;
+            transition: 1s;
         }
 
-        p:hover {
+        div:hover {
             font-size: 30px;
-            color: yellow;
-            transition: ease 5s;
+
         }
     </style>
 </head>
 
 <body>
     <div>
-        <p>我会变大</p>
+        我会变大
     </div>
 
 </body>

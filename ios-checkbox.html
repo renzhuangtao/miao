@@ -1,3 +1,11 @@
+<!--
+ * @Description: 
+ * @Author: renshuaitao
+ * @Date: 2021-11-26 15:23:17
+ * @LastEditTime: 2021-11-26 21:00:31
+ * @LastEditors: Please set LastEditors
+ * @Reference: 
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,27 +15,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div:hover {
-            width: 140px;
-            height: 66px;
-            border: 0.5px solid rgb(200 201 200);
-            border-radius: 300px;
-            transition: ease 1s;
+        label {
+            /*你想要设置的边框和内边距的值是包含在width内的*/
+            box-sizing: border-box;
+            width: 272px;
+            height: 156px;
+            /*inline-block包含了行内元素和块内元素的特点，
+            即设置了inline-block属性的元素既拥有了block元素可以设置width和height的特性，
+            又保持了inline元素不换行的特性。*/
+            display: inline-block;
+            border: 4px solid #c7c7c7;
+            /*设置元素的外边框圆角*/
+            border-radius: 9999px;
+            /*相对定位的元素是在文档中的正常位置偏移给定的值，但是不影响其他元素的偏移*/
+            position: relative;
+            /*缓动时间*/
+            transition: 0.3s;
+            padding: 7px;
+            /* 插页(阴影向内) | x偏移量 | y偏移量 |阴影扩散半径 阴影颜色 */
+            box-shadow: inset 0 0 0px white;
+            /*鼠标悬浮时图标样式*/
+            cursor: pointer;
         }
 
-        div {
-            width: 70px;
-            height: 66px;
-            background-color: rgb(209, 230, 24);
-            border-radius: 30px;
+        /*开启伪元素*/
+        label::before {
+            transition: .3s, padding-left .3s .05s;
+            box-shadow: 0 5px 15px #999;
+            /*元素会被移出正常文档流，并不为元素预留空间，
+            通过指定元素相对于最近的非 static 定位祖先元素的偏移，
+            来确定元素位置。绝对定位的元素可以设置外边距（margins），且不会与其他边距合并。*/
+            position: absolute;
+            left: 7px;
+            top: 7px;
+            content: '';
+            width: 134px;
+            padding-left: 0;
+            height: 134px;
+            display: inline-block;
+            background-color: white;
+            border-radius: 99999px;
 
+        }
+
+        /*:checked CSS 伪类选择器表示任何处于选中状态的*/
+        input:checked+label::before {
+            left: 123px;
+            padding-left: 134px;
+            width: 0;
+            transition: .3s width .3s .05s;
+        }
+
+        input:checked+label {
+            border-color: #30f34a;
+            box-shadow: inset 0 0 0px 75px #30f34a
         }
     </style>
 </head>
 
 <body>
-    <div>
-    </div>
+    <input type="checkbox" hidden id="checkl">
+    <label for="checkl"></label>
 </body>
 
 </html>

@@ -7,11 +7,20 @@
   <style type="text/css">
     body {
       background-image: url(https://api.nmb.show/1985acg.php);
+      /*repeat	默认。背景图像将在垂直方向和水平方向重复。
+        repeat-x	背景图像将在水平方向重复。
+        repeat-y	背景图像将在垂直方向重复。
+        no-repeat	背景图像将仅显示一次。
+        inherit	规定应该从父元素继承 background-repeat 属性的设置*/
       background-repeat: no-repeat;
-      /*图片不滚动*/
+      /*图片不滚动
+      scroll	默认值。背景图像会随着页面其余部分的滚动而移动。
+      fixed	当页面的其余部分滚动时，背景图像不会移动。
+      inherit	规定应该从父元素继承 background-attachment 属性的设置。*/
       background-attachment: fixed;
       padding: 0;
       margin: 0;
+      background-size: ;
     }
 
     p.a[tabindex="1"]:focus {

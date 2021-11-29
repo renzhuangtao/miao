@@ -1,3 +1,11 @@
+<!--
+ * @Description: 
+ * @Author: renshuaitao
+ * @Date: 2021-11-26 21:20:14
+ * @LastEditTime: 2021-11-26 21:49:14
+ * @LastEditors: Please set LastEditors
+ * @Reference: 
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,25 +17,55 @@
     <style>
         section {
             width: 190px;
-            height: 150px;
+            height: 170px;
 
         }
 
         div {
             border: 5px solid blue;
-            border-collapse: collapse;
+
             width: 50px;
             height: 50px;
             float: left;
             text-align: center;
+            margin-right: -5px;
+            margin-bottom: -5px;
 
         }
 
         div a {
-            text-decoration: none
+            text-decoration: none;
+            line-height: 50px;
         }
 
         div:hover {
+            border: 5px solid red;
+            position: relative;
+            /*当元素之间重叠的时候， z-index 较大的元素会覆盖较小的元素在上层进行显示。*/
+            z-index: 100;
+        }
+
+        table {
+            /*合并边框*/
+            border-collapse: collapse;
+            float: bottom;
+        }
+
+        tr,
+        col {
+            border: 5px solid pink;
+        }
+
+        td {
+            width: 50px;
+            height: 50px;
+            /*文本居中*/
+            text-align: center;
+            /*鼠标悬浮时图标样式*/
+            cursor: pointer;
+        }
+
+        td:hover {
             border: 5px solid red;
         }
     </style>
@@ -45,6 +83,26 @@
         <div><a href="">8</a></div>
         <div><a href="">9</a></div>
     </section>
+    <table>
+        <col>
+        <col>
+        <col>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+    </table>
 </body>
 
 </html>
