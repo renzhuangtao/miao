@@ -2,57 +2,74 @@
  * @Description: 
  * @Author: renshuaitao
  * @Date: 2021-11-22 22:21:33
- * @LastEditTime: 2021-11-23 21:27:58
+ * @LastEditTime: 2021-11-30 22:22:50
  * @LastEditors: Please set LastEditors
  * @Reference: 
 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        html,
+        body {
             margin: 0;
-            min-width: 930px;
+            height: 100%;
         }
-        .wordlist{
-            box-sizing: border-box;
-            width: 200px;
-            background-color:#eaeef3;
-            height:100vh;
-            border-right: 1px solid;
+
+        div {
+            height: 100%;
+            /*开启flex布局*/
+            display: flex;
         }
-        .wordlist h1{
-            font-size: 24px;
-            line-height: 72px;
-            margin:0 0.5em;
-            text-align: right;
+
+        section {
+            width: 0;
+            /*设置 flex 项主尺寸 的 flex 增长系数。*/
+            flex-grow: 1;
+            display: flex;
+            /*flex-direction CSS属性设置如何在伸缩容器中放置伸缩项，定义主轴和方向(正常或反向)。
+            从上向下*/
+            flex-flow: column;
         }
-        .wordlist div{
-            /*box-sizing 属性允许您以特定的方式定义匹配某个区域的特定元素。
-            例如，假如您需要并排放置两个带边框的框，
-            可通过将 box-sizing 设置为 "border-box"。 
-            这可令浏览器呈现出带有指定宽度和高度的框，并把边框和内边距放入框中*/
-            box-sizing: border-box;
-            height:27px;
-            margin:4px;
-            text-align:center;
+
+        aside {
+            width: 60px;
+            height: 100%;
+            /* 由浏览器定夺，如果内容被修剪，就会显示滚动条 */
+            overflow: auto;
+        }
+
+        header {
+            height: 70px;
+            overflow: auto;
+        }
+
+        main {
+            flex-grow: 1;
+            height: 0;
+            overflow: auto;
         }
     </style>
 </head>
-<body>
-    <div class="main"> 
-        <div class="wordlist">
-            <h1>OFJSJ SFImf</h1>
-            <div>
-                <input type="search" name="word" id="word" value="这是怎么回事？">
-                <button></button>
-            </div>
-        </div>
 
+<body>
+    <div>
+        <aside>HTML&lt;aside>&lt;/aside>元素表示一个和其余页面内容几乎无关的部分，被认为是独立于该内容的一部分并且可以被单独的拆分出来而不会使整体受影响。其通常表现为侧边栏或者标注框（call-out
+            boxes）。</aside>
+        <section>
+            <header>
+                用于展示介绍性内容，通常包含一组介绍性的或是辅助导航的实用元素
+            </header>
+            <main>元素的内容应当是独一无二的。任何同时存在于任意一系列文档中的相同、重复内容，比如侧边栏、导航栏链接、版权信息、网站 Logo，搜索框（除非搜索框为文档的主要功能），都不应当被包含在其内。</main>
+        </section>
+        <aside>HTML 元素表示一个和其余页面内容几乎无关的部分，被认为是独立于该内容的一部分并且可以被单独的拆分出来而不会使整体受影响。其通常表现为侧边栏或者标注框（call-out boxes）。</aside>
+        <aside>HTML 元素表示一个和其余页面内容几乎无关的部分，被认为是独立于该内容的一部分并且可以被单独的拆分出来而不会使整体受影响。其通常表现为侧边栏或者标注框（call-out boxes）。</aside>
     </div>
 </body>
+
 </html>
