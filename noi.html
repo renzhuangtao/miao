@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: renshuaitao
  * @Date: 2021-12-14 15:50:43
- * @LastEditTime: 2021-12-14 16:41:07
+ * @LastEditTime: 2021-12-14 22:12:18
  * @LastEditors: Please set LastEditors
  * @Reference: 
 -->
@@ -17,9 +17,104 @@
     var C = Number(prompt('C:'))
     console.log((A + B) * C)
 </script>
-<script id="ch0103/03">
+<script type="xxx" id="ch0103/03">
     var A = Number(prompt('A:'))
     var B = Number(prompt('B:'))
     var C = Number(prompt('C:'))
-    console.log((A + B) / C)
+    // parseInt解析字符串并返回整数
+    console.log(parseInt((A + B) / C))
+</script>
+<script type="xxx" id="ch0103/04">
+    var A = Number(prompt('A:'))
+    var B = Number(prompt('B:'))
+    var C = Number(A % B)
+    console.log(parseInt(A / B), C)
+</script>
+<script type="xxx" id="ch0103/05">
+    var A = Number(prompt("A"))
+    var B = Number(prompt("B"))
+    var C = Number(A / B)
+    <!-- toFixed() 方法可把 Number 四舍五入为指定小数位数的数字 -->
+    console.log(C.toFixed(9))
+</script>
+<script type="xxx" id="ch0103/06">
+    var A = Number(prompt("A"))
+    var B = Number(prompt("B"))
+    var D = Number(B / A * 100)
+    console.log(D.toFixed(3) + "%")
+</script>
+<script type="xxx" id="ch0103/07">
+    var x = Number(prompt("x"))
+    var a = Number(prompt("a"))
+    var b = Number(prompt("b"))
+    var c = Number(prompt("c"))
+    var d = Number(prompt("d"))
+    var y = Number((a * x ** 3) + (b * x ** 2) + (c * x) + d)
+    console.log(y.toFixed(7))
+</script>
+<script type="xxx" id="ch0103/08">
+    var F = Number(prompt("F"))
+    var C = (5 * (F - 32) / 9)
+    console.log(C.toFixed(5))
+</script>
+<script type="xxx" id="ch0103/09">
+    var pai = "3.14"
+    var r = Number(prompt("r"))
+    var radius = (2 * r)
+    var c = 2 * pai * r
+    var s = pai * r * r
+    console.log(radius.toFixed(4), c.toFixed(4), s.toFixed(4))
+</script>
+<script type="xxx" id="ch0103/10">
+    var r1 = Number(prompt("r1"))
+    var r2 = Number(prompt("r2"))
+    var R = 1 / (1 / r1 + 1 / r2)
+    console.log(R.toFixed(2))
+</script>
+<script type="xxx" id="ch0103/11">
+    var a = Number(prompt("a"))
+    var b = Number(prompt("b"))
+    var c = a % b
+    console.log(c.toFixed(4))
+</script>
+<script type="xxx" id="ch0103/12">
+    var r = Number(prompt("r"))
+    var V = 4 / 3 * 3.14 * r ** 3
+    console.log(V.toFixed(2))
+</script>
+<script type="xxx" id="ch0103/13">
+    var a = Number(prompt("a"))
+    var b = parseInt(a / 100)
+    var c = parseInt(a % 100 / 10)
+    var d = a - b * 100 - c * 10
+    console.log(d + "" + c + "" + b)
+</script>
+<script type="xxx" id="ch0103/14">
+    var r = Number(prompt("r"))
+    var h = Number(prompt("h"))
+    <!-- 圆柱体积 -->
+    var V = 3.14 * r * r * h
+    var n = 20 * 1000 / V
+    console.log(parseInt(n) + 1)
+</script>
+<script type="xxx" id="ch0103/15">
+    var n = Number(prompt("n"))
+    var x = Number(prompt("x"))
+    var y = Number(prompt("y"))
+    console.log(n - parseInt(y / x) - 1)
+</script>
+<script type="xxx" id="ch0103/16">
+    var x1 = Number(prompt("x1"))
+    var y1 = Number(prompt("y1"))
+    var x2 = Number(prompt("x2"))
+    var y2 = Number(prompt("y2"))
+    // sqrt() 函数返回一个数的平方根。
+    // abs() 函数返回一个数的绝对值。
+    var AB = Math.sqrt((Math.abs(Math.abs(x1) - Math.abs(x2)) ** 2) + (Math.abs(y1) - Math.abs(y2)) ** 2)
+    console.log(AB.toFixed(3))
+</script>
+<script id="ch0103/19">
+    var A = Number(prompt(""))
+    var B = Number(prompt(""))
+    console.log(A * B)
 </script>
