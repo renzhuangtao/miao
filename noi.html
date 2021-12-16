@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: renshuaitao
  * @Date: 2021-12-14 15:50:43
- * @LastEditTime: 2021-12-16 02:10:56
+ * @LastEditTime: 2021-12-16 22:04:15
  * @LastEditors: Please set LastEditors
  * @Reference: 
 -->
@@ -259,33 +259,184 @@
         alert("NO")
     }
 </script>
+<!-- 判断一个数能否同时被3和5，7整除 -->
 <script type="xxx" id="ch0104/9">
     var n = Number(prompt(""))
-    if (n % 3 == 0 && n % 5 == 0 && n % 7 == 0) {
-        alert("3 5 7")
-    } else if (n %)
-</script>
-<script xtype="xxx" id="ch0104/10">
-    var n = Number(prompt(""))
-    var b = Number(prompt(""))
-    if (n < 60) {
-        if (b < 60) {
-            alert("0")
-        } else {
-            alert("1")
+    if (n % 3 == 0 || n % 5 == 0 || n % 7 == 0) {
+        if (n % 3 == 0) {
+            alert("3")
         }
-    } else if (n < 60) {
+        if (n % 5 == 0) {
+            alert("5")
+        }
+        if (n % 7 == 0) {
+            alert("7")
+        }
+    } else {
+        alert("n")
+    }
+</script>
+<!-- 有一门课不及格的学生 -->
+<script type="xxx" id="ch0104/10">
+    var a = Number(prompt("数学"))
+    var b = Number(prompt("语文"))
+    if (a < 60 && b > 60 || a >= 60 && b < 60) {
         alert("1")
     } else {
         alert("0")
     }
 </script>
+<!-- 晶晶去约会 -->
 <script type="xxx" id="ch0104/11">
     var n = Number(prompt(""))
-    if (n != 1 && n != 3 && n != 5) {
+    if (n % 2 == 0) {
         alert("YES")
 
-    } else {
+    } else if (n == 7) {
+        alert("YES")
+    }else {
         alert("NO")
     }
+</script>
+<!-- 骑车与走路 -->
+<script type="xxx" id="ch0104/12">
+    var n = Number(prompt(""))
+    if (n == 100) {
+        alert("All")
+    } else if (n > 100) {
+        alert("Bike")
+    } else (
+        alert("Walk")
+    )
+</script>
+<!-- 分段函数 -->
+<script type="xxx" id="ch0104/13">
+    var x = Number(prompt(""))
+    var y
+    if (x < 5) {
+        y = -x + 2.5
+    } else if (x < 10) {
+        y = 2 - 1.5 * (x - 3) * (x - 3)
+    } else {
+        y = x / 2 - 1.5
+    }
+    console.log(y.toFixed(3))
+</script>
+<!-- 计算邮费 -->
+<script type="xxx" id="ch0104/14">
+    var weight = Number(prompt("重量"))
+    var em = prompt("是否加急")
+    if (weight < 1000 && em == "n") {
+        alert("8")
+    } else if (weight < 1000 && em == "y") {
+        alert("13")
+    } else if (weight > 1000 && em == "n") {
+        // ceil为向上取整
+        var r = 8 + Math.ceil((weight - 1000) / 500) * 4
+        alert(r)
+    } else {
+        var r = 8 + Math.ceil((weight - 1000) / 500) * 4 + 5
+        alert(r)
+    }
+</script>
+<!-- 最大数输出 -->
+<script type="xxx" id="ch0104/15">
+    debugger
+    var a = Number(prompt(""))
+    var b = Number(prompt(""))
+    var c = Number(prompt(""))
+    if (a > b) {
+        if (a > c) {
+            alert(a)
+        } else {
+            alert(c)
+        }
+    } else if (b > c) {
+        alert(b)
+    } else {
+        alert(c)
+    }
+</script>
+<!-- 三角形判断 -->
+<script type="xxx" id="ch0104/16">
+    // debugger
+    var a = Number(prompt(""))
+    var b = Number(prompt(""))
+    var c = Number(prompt(""))
+    if (a + b > c && a + c > b && b + c > a) {
+        alert("yes")
+    } else {
+        alert("no")
+    }
+
+</script>
+<!-- 判断闰年 -->
+<script type='xxx' id="ch0104/17">
+    var a = Number(prompt(""))
+    if (a % 4 == 0) {
+        if (a % 3200 == 0) {
+            alert("N")
+        } else if (a % 100 == 0 && a % 400 != 0) {
+            alert("N")
+        } else {
+            alert("Y")
+        }
+    } else {
+        alert("Y")
+    }
+</script>
+<!-- 点和正方形的关系 -->
+<script type="xxx" id="ch0104/18">
+    var x = Number(prompt(""))
+    var y = Number(prompt(""))
+    if (x <= 1 && x >= -1 && y <= 1 && y >= -1) {
+        alert("Yes")
+    } else {
+        alert("no")
+    }
+</script>
+<!-- 简单计算器 -->
+<script type="xxx" id="ch0104/19">
+    var a = Number(prompt("数字"))
+    var b = Number(prompt("数字"))
+    var c = prompt("符号")
+    if (c == "+") {
+        alert(a + b)
+    } else if (c == "-") {
+        alert(a - b)
+    } else if (c == "*") {
+        alert(a * b)
+    } else if (c == "/") {
+        if (b == 0) {
+            alert("Divided by zero!")
+        } else {
+            alert(a / b)
+        }
+    }
+</script>
+<!-- 吃苹果2 -->
+<script type="xxx" id="ch0104/21">
+    var n = Number(prompt(""))
+    var x = Number(prompt(""))
+    var y = Number(prompt(""))
+    var k = Math.ceil(y / x)
+    if (k < n) {
+        alert(n - k)
+    } else {
+        alert(0)
+    }
+</script>
+<!-- 数字小游戏 -->
+<script type="xxx">
+    var number = Math.round(Math.random() * 100)
+    var n
+    do {
+        n = Number(prompt())
+        if (n > number) {
+            alert("too big")
+        } else if (n < number) {
+            alert("too small")
+        }
+    } while (n != number)
+    alert("棒")
 </script>
