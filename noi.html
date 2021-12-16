@@ -2,10 +2,29 @@
  * @Description: 
  * @Author: renshuaitao
  * @Date: 2021-12-14 15:50:43
- * @LastEditTime: 2021-12-15 15:20:20
+ * @LastEditTime: 2021-12-16 02:10:56
  * @LastEditors: Please set LastEditors
  * @Reference: 
 -->
+<script type="xxx">
+    x = 2021
+    console.log(x) // 输出x
+    console.log(x * 2) // 输出x的两倍
+    console.log(x * x) // 输出x的平方
+    console.log(x * x * x * x * x) // 输出x的五次平方
+    console.log(x > 50 && x < 100) // 输出x是否在50到100以内，是输出true，不是输出false
+    console.log(x % 2 == 1) // 输出x是否为奇数，是输出true，不是输出false
+    console.log(x % 2 == 0) // 输出x是否为偶数，是输出true，不是输出false
+    console.log(x % 10) // 输出x的个位数
+    console.log(x % 100) // 输出x百位数以下的部分，对于2021，即输出21，对于2035，即输出35
+    console.log(x > 200 && x % 3 == 0 && x % 7 != 0) // 输出x是否大于200且为3的倍数但不是7的倍数。
+    console.log((x - (x % 100)) / 100 + 1) // 输出x做为年份时，所在的世纪，对于2021即输出21，对于1864即输出19
+    console.log(x % 4 == 0 && x % 100 != 0) // 输出x做为年份时，是否为闰年，是输出true，不是输出false
+    console.log(
+        (x == 2 || x == 3 || x == 5 || x == 7) ||
+        x != 1 && x % 2 != 0 && x % 3 != 0 && x % 5 != 0 && x % 7 != 0)
+        // 输出x是否为素数（此时x范围为100以内）
+</script>
 <script type="xxx" id="ch0103/01">
     var A = Number(prompt('A:'))
     var B = Number(prompt('B:'))
@@ -21,6 +40,7 @@
     var A = Number(prompt('A:'))
     var B = Number(prompt('B:'))
     var C = Number(prompt('C:'))
+    <!-- Math.trunc() 方法会将数字的小数部分去掉，只保留整数部分。  -->
     // parseInt解析字符串并返回整数
     console.log(parseInt((A + B) / C))
 </script>
@@ -58,11 +78,11 @@
     console.log(C.toFixed(5))
 </script>
 <script type="xxx" id="ch0103/09">
-    var pai = "3.14159"
+    var pi = "3.14159"
     var r = Number(prompt("r"))
     var radius = (2 * r)
-    var c = 2 * pai * r
-    var s = pai * r * r
+    var c = 2 * pi * r
+    var s = pi * r * r
     console.log(radius.toFixed(4), c.toFixed(4), s.toFixed(4))
 </script>
 <script type="xxx" id="ch0103/10">
@@ -83,19 +103,20 @@
     console.log(V.toFixed(2))
 </script>
 <script type="xxx" id="ch0103/13">
-    var a = Number(prompt("a"))
-    var b = parseInt(a / 100)
-    var c = parseInt(a % 100 / 10)
-    var d = a - b * 100 - c * 10
-    console.log(d + "" + c + "" + b)
+    var a = Number(prompt('a'));
+    var ge = a % 10;
+    var shi = (((a - ge) / 10) % 10);
+    var bai = (parseInt((a - ge - shi) / 100));
+    console.log(ge + "" + shi + "" + bai);
 </script>
 <script type="xxx" id="ch0103/14">
-    var r = Number(prompt("r"))
     var h = Number(prompt("h"))
+    var r = Number(prompt("r"))
     // < !--圆柱体积 -->
-    var V = 3.14159 * r * r * h
-    var n = 20 * 1000 / V
-    console.log(parseInt(n) + 1)
+    var V = 3.14159 * r * r * h / 1000
+    // Math.ceil() 函数返回大于或等于一个给定数字的最小整数。
+    var n = Math.ceil(20 / V)
+    console.log(n)
 </script>
 <script type="xxx" id="ch0103/15">
     var n = Number(prompt("n"))
@@ -110,11 +131,161 @@
     var y2 = Number(prompt("y2"))
     // sqrt() 函数返回一个数的平方根。
     // abs() 函数返回一个数的绝对值。
-    var AB = Math.sqrt((Math.abs(Math.abs(x1) - Math.abs(x2)) ** 2) + (Math.abs(y1) - Math.abs(y2)) ** 2)
-    console.log(AB.toFixed(3))
+    var AB = x1 - x2
+    var BA = y1 - y2
+    var C = Math.sqrt(AB * AB + BA * BA)
+    console.log(C.toFixed(3))
+</script>
+<script type="xxx" id="ch0103/17">
+    debugger
+    var x1 = Number(prompt("x1"))
+    var y1 = Number(prompt("y1"))
+    var x2 = Number(prompt("x2"))
+    var y2 = Number(prompt("y2"))
+    var x3 = Number(prompt("x3"))
+    var y3 = Number(prompt("y3"))
+    var a = Math.sqrt(Math.pow((x1 - x2), 2) + Math.sqrt(Math.pow((y1 - y2), 2)))
+    var b = Math.sqrt(Math.pow((x1 - x3), 2) + Math.sqrt(Math.pow((y1 - y3), 2)))
+    var c = Math.sqrt(Math.pow((x3 - x2), 2) + Math.sqrt(Math.pow((y3 - y2), 2)))
+    var p = (a + b + c) / 2
+    var r = Math.sqrt(p * (p - a) * (p - b) * (p - c))
+    console.log(r.toFixed(2))
+</script>
+<script type="xxx" id="ch0103/18">
+    var a1 = Number(prompt("a1"))
+    var a2 = Number(prompt("a2"))
+    var n = Number(prompt("n"))
+    var diff = a2 - a1
+    var r = a1 + (n - 1) * diff
+    console.log(r)
 </script>
 <script type="xxx" id="ch0103/19">
     var A = Number(prompt(""))
     var B = Number(prompt(""))
     console.log(A * B)
+</script>
+<script type="xxx" id="ch0103/20">
+    var n = Number(prompt(""))
+    var q = 2 ** n
+    console.log(q)
+</script>
+
+
+
+
+<!-- 判断数正负 -->
+<script type="xxx" id="ch0104/01">
+    var n = Number(prompt("0"))
+    if (n > 0) {
+        <!-- alert()是弹出警告框的意思。 -->
+        alert("positive")
+    } else if (n == 0) {
+        alert("zero")
+    } else {
+        alert("negative")
+    }
+</script>
+<!-- 输出绝对值 -->
+<script type="xxx" id="ch0104/02">
+    var n = Number(prompt(""))
+    if (n > 0) {
+        console.log(n)
+    } else {
+        console.log(-n)
+    }
+</script>
+<!-- 奇偶数判断 -->
+<script type="xxx" id="ch0104/03">
+    var n = Number(prompt(""))
+    if (n % 2 == 1) {
+        alert("odd")
+    } else if (n % 2 == 0) {
+        alert("even")
+    }
+
+</script>
+<!-- 奇偶ASCII值判断 -->
+<script type="xxx" id="ch0104/04">
+    debugger
+    var n = prompt("")
+    var s = n.charCodeAt(0)
+    if (s % 2 == 1) {
+        alert("YES")
+    } else {
+        alert("NO")
+    }
+</script>
+<!-- 整数大小比较 -->
+<script type="xxx" id="ch0104/5">
+    var x = Number(prompt(""))
+    var y = Number(prompt(""))
+    if (x > y) {
+        alert(">")
+    } else if (x == y) {
+        alert("==")
+    } else {
+        alert("<")
+    }
+</script>
+<script type="xxx" id="ch0104/6">
+    // debugger
+    var a = Number(prompt('不超过1000'))
+    if (a / 10 < 1) {
+        alert(0)
+    } else if (a / 10 >= 10) {
+        alert(0)
+    } else {
+        alert(1)
+    }
+</script>
+<!-- 满足10 20 -->
+<script type="xxx" id="ch0104/7">
+    var n = Number(prompt(""))
+    var a = Number(prompt(""))
+    if (n > 10) {
+        alert("1")
+    } else if (a > 20) {
+        alert("1")
+    } else {
+        alert("0")
+    }
+</script>
+<script type="xxx" id="ch0104/8">
+    // 判断一个数能否同时被3和5整除
+    var n = Number(prompt(""))
+    if (n % 3 == 0 && n % 5 == 0) {
+        alert("YES")
+    } else {
+        alert("NO")
+    }
+</script>
+<script type="xxx" id="ch0104/9">
+    var n = Number(prompt(""))
+    if (n % 3 == 0 && n % 5 == 0 && n % 7 == 0) {
+        alert("3 5 7")
+    } else if (n %)
+</script>
+<script xtype="xxx" id="ch0104/10">
+    var n = Number(prompt(""))
+    var b = Number(prompt(""))
+    if (n < 60) {
+        if (b < 60) {
+            alert("0")
+        } else {
+            alert("1")
+        }
+    } else if (n < 60) {
+        alert("1")
+    } else {
+        alert("0")
+    }
+</script>
+<script type="xxx" id="ch0104/11">
+    var n = Number(prompt(""))
+    if (n != 1 && n != 3 && n != 5) {
+        alert("YES")
+
+    } else {
+        alert("NO")
+    }
 </script>
