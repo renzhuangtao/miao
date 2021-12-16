@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: renshuaitao
  * @Date: 2021-12-14 15:50:43
- * @LastEditTime: 2021-12-16 22:04:15
+ * @LastEditTime: 2021-12-16 22:32:45
  * @LastEditors: Please set LastEditors
  * @Reference: 
 -->
@@ -439,4 +439,17 @@
         }
     } while (n != number)
     alert("棒")
+</script>
+<!-- 平均年龄 -->
+<script id="ch0105/01">
+    var n = Number(prompt("班级人数"))
+    var agesum = 0
+    var counter = 0
+    while (counter < n) {
+        var age = Number(prompt())
+        agesum = agesum + age
+        counter = counter + 1
+    }
+    var ageAverage = agesum / n
+    console.log(ageAverage.toFixed(2))
 </script>
