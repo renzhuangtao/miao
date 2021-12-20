@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: renshuaitao
  * @Date: 2021-12-14 15:50:43
- * @LastEditTime: 2021-12-16 22:32:45
+ * @LastEditTime: 2021-12-19 22:19:50
  * @LastEditors: Please set LastEditors
  * @Reference: 
 -->
@@ -216,7 +216,7 @@
     }
 </script>
 <!-- 整数大小比较 -->
-<script type="xxx" id="ch0104/5">
+<script type="xxx" id="ch0104/05">
     var x = Number(prompt(""))
     var y = Number(prompt(""))
     if (x > y) {
@@ -227,7 +227,7 @@
         alert("<")
     }
 </script>
-<script type="xxx" id="ch0104/6">
+<script type="xxx" id="ch0104/06">
     // debugger
     var a = Number(prompt('不超过1000'))
     if (a / 10 < 1) {
@@ -250,7 +250,7 @@
         alert("0")
     }
 </script>
-<script type="xxx" id="ch0104/8">
+<script type="xxx" id="ch0104/08">
     // 判断一个数能否同时被3和5整除
     var n = Number(prompt(""))
     if (n % 3 == 0 && n % 5 == 0) {
@@ -260,7 +260,7 @@
     }
 </script>
 <!-- 判断一个数能否同时被3和5，7整除 -->
-<script type="xxx" id="ch0104/9">
+<script type="xxx" id="ch0104/09">
     var n = Number(prompt(""))
     if (n % 3 == 0 || n % 5 == 0 || n % 7 == 0) {
         if (n % 3 == 0) {
@@ -338,6 +338,20 @@
         var r = 8 + Math.ceil((weight - 1000) / 500) * 4 + 5
         alert(r)
     }
+
+</script>
+<script type="xxx" id="ch0104/14">
+    var weight = Number(prompt("重量"))
+    var em = prompt("是否加急")
+    var pirce = 8
+    if (weight > 1000){
+        pirce = pirce + Math.ceil((weight - 1000) / 500) * 4
+    }
+    if (em == "y"){
+        pirce = pirce + 5
+    }
+    console.log(pirce)
+    
 </script>
 <!-- 最大数输出 -->
 <script type="xxx" id="ch0104/15">
@@ -441,7 +455,7 @@
     alert("棒")
 </script>
 <!-- 平均年龄 -->
-<script id="ch0105/01">
+<script type="xxx" id="ch0105/01">
     var n = Number(prompt("班级人数"))
     var agesum = 0
     var counter = 0
@@ -451,5 +465,230 @@
         counter = counter + 1
     }
     var ageAverage = agesum / n
+    <!-- ageAverage:求平均数 -->
     console.log(ageAverage.toFixed(2))
+</script>
+<!-- 财务管理 -->
+<script type="xxx" id="ch0105/02">
+    var a = 0
+    var b = 0
+    var c = 0
+    while (a < 12) {
+        var c = Number(prompt("钱数"))
+        a = a + 1
+        b = c + b
+    }
+    var d = b / 12
+    console.log("$" + d.toFixed(2))
+
+</script>
+<!-- 均值 -->
+<script type="xxx" id="ch0105/03">
+    var n = Number(prompt(""))
+    var a = 0
+    var b = 0
+    while (a < n) {
+        var c = Number(prompt(""))
+        a = a + 1
+        b = b + c
+    }
+    console.log((b / n).toFixed(4))
+
+</script>
+<!-- 求整数的和与均值 -->
+<script type="xxx" id="ch0105/04">
+    var n = Number(prompt("n个数值"))
+    var x = 0
+    var sum = 0
+    while (x < n) {
+        var num = Number(prompt("数值"))
+        x = x + 1
+        sum = num + sum
+    }
+    console.log(sum, (sum / n).toFixed(5))
+</script>
+<!-- 最高的分数 -->
+<script type="xxx" id="ch0105/05">
+    var n = Number(prompt("几个人的分数"))
+    var counter = 0
+    var max = 0
+    while (counter < n) {
+        var score = Number(prompt("分数"))
+        counter = counter + 1
+        if (score > max) {
+            max = score
+        }
+    }
+    console.log(max)
+</script>
+<!-- 整数序列的元素最大跨度值 -->
+<script type="xxx" id="ch0105/06">
+    var n = Number(prompt("几个数："))
+    var counter = 0
+    var max = 0
+    var min = 0
+    while (counter < n) {
+        var num = Number(prompt("数值"))
+        counter = counter + 1
+        if (num > max) {
+            max = num
+        }
+        if (num < min) {
+            min = num
+        }
+    }
+    var max_diff = max - min
+    console.log(max_diff)
+</script>
+<!-- 奥运奖牌计数 -->
+<script type="xxx" id="ch0105/07">
+    var day = Number(prompt("天数"))
+    var count = 0
+    var AuAll = 0
+    var AgAll = 0
+    var CuAll = 0
+    while (count < day) {
+        var Au = Number(prompt("金牌"))
+        var Ag = Number(prompt("银牌"))
+        var Cu = Number(prompt("铜牌"))
+        AuAll = AuAll + Au
+        AgAll = AgAll + Ag
+        CuAll = CuAll = Cu
+        count = count + 1
+
+    }
+    var all = AuAll + AgAll + CuAll
+    console.log(AuAll, AgAll, CuAll, all)
+</script>
+<!-- 多边形内角和 -->
+<script type="xxx" id="ch0105/08">
+    var n = Number(prompt("边数"))
+    var total = (n - 2) * 180
+    var x = 0
+    var count = 0
+    while (x < n - 1) {
+        var angle = Number(prompt("角度"))
+        x = x + 1
+        count = angle + count
+    }
+    console.log(total - count)
+</script>
+<!-- 奇数求和 -->
+<script type="xxx" id="ch0105/09">
+    var m = Number(prompt())
+    var n = Number(prompt(""))
+    var x = m
+    var sum = 0
+    while (x <= n) {
+        if (x % 2 == 0) {
+            sum = sum + x
+        }
+        x = x + 1
+    }
+    console.log(sum)
+</script>
+<!-- 满足条件的数累加 -->
+<script type="xxx" id="ch0105/10">
+    var m = Number(prompt())
+    var n = Number(prompt(""))
+    // 将m调整到大于等于它的第一个17的倍数
+    if (m % 17 !== 0) {
+        m = m + (17 - m % 17)
+    }
+    var x = m
+    var sum = 0
+    while (x <= n) {
+        sum = sum + x
+        x = x + 17
+    }
+    console.log(sum)
+</script>
+<!-- 整数的个数 -->
+<script type="xxx" id="ch0105/11">
+    var n = Number(prompt(""))
+    var count = 0
+    var 一的数量 = 0
+    var 五的数量 = 0
+    var 十的数量 = 0
+    while (count < n) {
+        var x = Number(prompt(""))
+        count = count + 1
+        if (x === 1) {
+            一的数量 = 一的数量 + 1
+        } else if (x === 5) {
+            五的数量 = 五的数量 + 1
+        } else if (x === 10) {
+            十的数量 = 十的数量 + 1
+        }
+    }
+    console.log(一的数量, 五的数量, 十的数量)
+</script>
+<!-- 与指定数字相同的数的个数 -->
+<script type="xxx" id="ch0105/12">
+    var n = Number(prompt(""))
+    var target = Number(prompt(""))
+    var target的数量 = 0
+    for (var i = 0; i < n; i = i + 1) {
+        var x = Number(prompt(""))
+        if (x === target) {
+            target的数量 = target的数量 + 1
+        }
+    }
+    console.log(target的数量)
+</script>
+<script type="xxx">
+    // 编写一个循环 调用7次console.log 打印出一个三角形
+    var count = ""
+    for (var i = 0; i < 7; i++) {
+        count = count + "#"
+        console.log(count)
+    } 
+</script>
+<script type="xxx">
+    // 编写一个程序，使用console.log打印出1到100的所有数字，
+    // 当数字被3整除打印"Fizz"，当数字被5整除且不被3整除打印"Buzz"
+    for (var i = 0; i <= 100; i++) {
+        // 修改程序，当程序遇到同时被3和5整除的情况打印"FizzBuzz"
+        if (i % 3 == 0 && i % 5 == 0) {
+            console.log("BuzzFizz")
+        }
+        else if (i % 3 == 0) {
+            console.log("Fizz")
+        } else if (i % 3 != 0 && i % 5 == 0) {
+            console.log("Buzz")
+        } else {
+            console.log(i)
+        }
+    }
+</script>
+<!-- 乘方计算 -->
+<script type="xxx" id="ch0105/13">
+    var a = Number(prompt())
+    var n = Number(prompt(""))
+    var result = 1
+    for (var i = 0; i < n; i++) {
+        result *= a
+
+    }
+    console.log(result)
+</script>
+<!-- 人口增长问题 -->
+<script type="xxx" id="ch0105/14">
+    var x = Number(prompt("人数"))
+    var n = Number(prompt("年数"))
+    for (var i = 0; i < n; i++) {
+        x = x * (1 + 0.001)
+    }
+    console.log(x.toFixed(4))
+</script>
+<!-- 银行利息 -->
+<script type="xxx" id="ch0105/15">
+    var R = Number(prompt("利率"))
+    var M = Number(prompt("钱数"))
+    var Y = Number(prompt("年数"))
+    var r = 1 + R / 100
+    for (var i = 0; i < Y; i++) {
+        M = M * r
+    }
+    console.log(Math.trunc(M))
 </script>
