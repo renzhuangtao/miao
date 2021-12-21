@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: renshuaitao
  * @Date: 2021-12-14 15:50:43
- * @LastEditTime: 2021-12-19 22:19:50
+ * @LastEditTime: 2021-12-21 22:28:45
  * @LastEditors: Please set LastEditors
  * @Reference: 
 -->
@@ -457,15 +457,17 @@
 <!-- 平均年龄 -->
 <script type="xxx" id="ch0105/01">
     var n = Number(prompt("班级人数"))
+    
+    <!-- 记住所有人年龄和 -->
     var agesum = 0
     var counter = 0
     while (counter < n) {
-        var age = Number(prompt())
+        var age = Number(prompt("年龄"))
         agesum = agesum + age
         counter = counter + 1
     }
+    <!-- 求平均数 -->
     var ageAverage = agesum / n
-    <!-- ageAverage:求平均数 -->
     console.log(ageAverage.toFixed(2))
 </script>
 <!-- 财务管理 -->
@@ -479,16 +481,17 @@
         b = c + b
     }
     var d = b / 12
+    <!-- 保留小数点后第二位 -->
     console.log("$" + d.toFixed(2))
 
 </script>
 <!-- 均值 -->
 <script type="xxx" id="ch0105/03">
-    var n = Number(prompt(""))
+    var n = Number(prompt("几个整数"))
     var a = 0
     var b = 0
     while (a < n) {
-        var c = Number(prompt(""))
+        var c = Number(prompt("样本数据"))
         a = a + 1
         b = b + c
     }
@@ -509,7 +512,7 @@
 </script>
 <!-- 最高的分数 -->
 <script type="xxx" id="ch0105/05">
-    var n = Number(prompt("几个人的分数"))
+    var n = Number(prompt("考试的人数"))
     var counter = 0
     var max = 0
     while (counter < n) {
@@ -691,4 +694,240 @@
         M = M * r
     }
     console.log(Math.trunc(M))
+</script>
+<!-- 买房子 -->
+<script type="xxx" id="ch0105/16">
+    var N = Number(prompt("工资"))
+    var K = Number(prompt("几年后可以买房"))
+    var sum = 0
+    var housePrice = 200//起始房价200万
+    var buyed = false
+    for (var i = 1; i <= 20; i++) {
+        sum += N //累计工资
+        if (sum >= housePrice) {//对比攒的钱与房价
+            console.log(i)
+            buyed = true
+            break//结束循环
+        }
+        housePrice = housePrice * (1 + K / 100) //房子涨价
+    }
+    if (!buyed) {
+        console.log("买不起了")
+    }
+</script>
+<!-- 菲波那契数列 -->
+<script type="xxx" id="ch0105/17">
+    var k = Number(prompt(""))
+    var a = 0
+    var b = 1
+    var c
+    for (var i = 0; i < k; i++) {
+        c = a + b
+        a = b
+        b = c
+    }
+    console.log(a)
+    <!-- 定义函数方法 -->
+    function fidd(n) {
+        var a = 0
+        var b = 1
+        for (var i = 0; i < n; i++) {
+            b = a + b
+            a = b - a
+        }
+        return a
+    }
+</script>
+<!-- 鸡尾酒疗法 -->
+<script type="xxx" id="ch0105/18">
+    var n = Number(prompt(""))
+    var total = Number(prompt(""))
+    var effective = Number(prompt())
+    var ratio = effective / total
+
+    for (var i = 1; i < n; i++) {
+        var t = Number(prompt())
+        var e = Number(prompt())
+        var r = e / t
+        if (r - ratio > 0.05) {
+            console.log("better")
+        } else if (ratio - r > 0.05) {
+            console.log("worse")
+        } else {
+            console.log("same")
+        }
+    }
+</script>
+<!-- 救援 -->
+<script type="xxx" id="ch0105/19">
+    var n = Number(prompt("屋顶数"))
+    var sum = 0
+    <!-- 循环屋顶 -->
+    for (var i = 0; i < n; i++) {
+        var x = Number(prompt("x坐标"))
+        var y = Number(prompt("y坐标"))
+        var p = Number(prompt("人数"))
+        var d = Math.sqrt(x * x + y * y)
+        var time = p * 1.5 + d / 50 * 2
+        sum = sum + time
+    }
+    console.log(Math.ceil(sum))
+</script>
+<!-- 球弹跳高度的计算 -->
+<script type="xxx" id="ch0105/20">
+    var n = Number(prompt("起始高度"))
+    var h = 20
+    var sum = h
+    for (var i = 2; i <= 10; i++) {
+        h /= 2
+        sum += h * 2
+    } console.log(sum, h/2)
+</script>
+<!-- 角谷猜想 -->
+<script type="xxx" id="ch0105/21">
+        var n = Number(prompt(""))
+        while(true){
+            if (n == 1){
+                console.log("End")
+                break
+            }
+            if (n % 2 == 1){
+                var t = n * 3 + 1
+                console.log(n + "*3+1=" + t)
+                n = t
+            }else if (n % 2 == 0){
+                var t = n /2
+                console.log(n + "/2=" + t)
+                n = t
+            }
+        }
+    </script>
+<!-- 存钱计划 -->
+<script type="xxx" id="ch0105/22">
+    var money = 0//手上的钱
+    var stock = 0
+    var flag = false
+    for (var i = 0; i <= 12; i++) {
+        money += 300
+        var budget = Number(prompt("预算"))
+        if (money < budget) {
+            console.log(-i)
+            flag = true
+            break//钱不够了停止循环
+        }
+        money = money - budget
+        if (money >= 100) {
+            var left = money % 100//保留零头
+            stock += money - left//存储整百
+            money = left//存完钱手中的钱
+        }
+    }
+    if (!flag) {
+        console.log(stock * 1.2 + money)
+    }
+</script>
+<script type="xxx" id="ch0105/23">
+    var m = Number(prompt("总库存"))
+    var n = Number(prompt("人数1~100"))
+    var not = 0//没取上药的人数计数
+    for (var i = 0; i < n; i++) {
+        var med = Number(prompt(""))
+        if (med <= m) {
+            m -= med
+        } else {
+            not++
+        }
+    }
+    alert(not)
+</script>
+<script xtype="xxx" id="ch0105/24">
+    var n = Number(prompt("次数"))
+    var max = 0 //最大记录
+    var c = 0 //当前连续数量
+    for (var i = 0; i < n; i++) {
+        var a = Number(prompt("收缩压"))
+        var b = Number(prompt("舒张压"))
+        if (a >= 90 && a <= 140 && b >= 60 && b <= 90) {
+            c++
+            if (c > max) {//破纪录
+                max = c
+            }
+        } else {
+            c = 0
+        }
+    }
+    console.log(max)
+</script>
+<script type="xxx" id="ch0105/30">
+    var n = Number(prompt(""))
+    var sum = 0
+    var p = 1
+    var q = 2
+    for (var i = 0; i < n; i++) {
+        sum += q / p
+
+    }
+</script>
+<script type="xxx" id="ch010/38">
+    var m = Number(prompt())
+    for (var i = 0; i < m; i++) {
+        var n = Number(prompt(""))
+        var c = Number(prompt(""))
+        console.log(0)
+        else {
+
+            for (var j = 0; j >= 0; j--) {
+                var c = Number(prompt(""))
+                console.log(c * j)
+            }
+        }
+
+    }
+    }
+</script>
+<script type="xxx">
+
+    var n = function(x){
+        return x * x
+    }
+    console.log(n(12))
+</script>
+<script type="xxx">
+    // 求阶乘
+    function factorial(n) {
+        var result = 1
+        for (var i = 1; i <= n; i++) {
+            result *= i
+        }
+        return result
+    }
+</script>
+<script type="xxx">
+    function isPrime(n) {
+
+        for (var i = 2; i * 1 <= n; i++) {
+            if (n % i == 0) {
+                return false
+            }
+
+        }
+        return true
+    }
+</script>
+<script type="xxx">
+    // 如果一个数与7有关就返回真，否知返回假
+    // 与7有关:是7的倍数或任意位上有7 
+    function  qiao(n) {
+        if (n % 7 == 0) {
+            return true
+        }
+        while (n > 0) {
+            var digit = n % 10;//取出个位数
+            if (digit == 7) {
+                return true
+            }
+            n = (n - digit) % 10;
+        }
+        return false
+    }
 </script>
