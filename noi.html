@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: renshuaitao
  * @Date: 2021-12-14 15:50:43
- * @LastEditTime: 2021-12-21 22:28:45
+ * @LastEditTime: 2021-12-22 10:13:55
  * @LastEditors: Please set LastEditors
  * @Reference: 
 -->
@@ -840,7 +840,7 @@
     }
     alert(not)
 </script>
-<script xtype="xxx" id="ch0105/24">
+<script type="xxx" id="ch0105/24">
     var n = Number(prompt("次数"))
     var max = 0 //最大记录
     var c = 0 //当前连续数量
@@ -883,6 +883,18 @@
         }
 
     }
+    }
+</script>
+<script type="xxx">
+    <!-- 计算一个数的宽度 -->
+    function digitwidth(m) {
+        var width = 0
+        do {
+            width++
+            var 个位 = m % 10
+            m = (m - 个位) / 10
+        } while (m > 0)
+        return width
     }
 </script>
 <script type="xxx">
